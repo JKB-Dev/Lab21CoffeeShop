@@ -1,30 +1,262 @@
 @charset "UTF-8";
 
+body {
+	padding-top: 50px;
+	background-color: white;
+	align-content: center;
+	position: relative;
+	width: 80%;
+	margin-left: 90px;
+}
+
+.topnav {
+  margin-top: -50px;
+  overflow: hidden;
+  background-color: white;
+  text-align: center;
+}
+
+.topnav a {
+  /* float: left; */
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  border-bottom: 8px white;
+}
+
+.topnav a:hover {
+  border-bottom-color: #ed6334;
+  text-decoration: underline;
+  text-decoration-color: #ed6334;
+}
+
+.topnav a.active {
+  background-color: #006341;
+  color: white;
+}
+
+.register {
+	font-size: 200%;
+	height: 200px;
+	background-color: #eaeaea;
+	text-align: center;
+	padding: 20px;
+}
+
+a {
+	font-family: 'Open Sans', sans-serif;
+	color: black;
+	
+}
+
+
+h1 {
+	font-family: 'IBM Plex Sans', sans-serif;
+	color: #1ea8b4;
+	text-align: center;
+}
+
+p {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 24.2px;
+	font-weight: 400;
+	font-style: normal;
+	color: black;
+	text-align: center;
+}
+
+h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24.2px;
+	font-weight: 500;
+	font-style: normal;
+	color: black;
+}
+
+h3 {
+	font-family: 'IBM Plex Sans', sans-serif;
+	color: #444444;
+	text-align: center;
+}
+
+h6 {
+	font-family: andale mono, sans-serif;
+	font-size: 4pt;
+	text-align: left;
+	margin-top: -20px;
+}
+
+.button {
+	background-color: #006341;
+	border: none;
+	color: #006341;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+.button1 {
+	background-color: #ff6633;
+	color: white;
+	align: center;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.button1:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+legend {
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	font-size: 200%;
+}
+
+fieldset {
+	padding: 50px;
+	background-color: #eaeaea;
+}
+
 form {
-    width: 80%;
-    margin: 0 left;
+	width: 80%;
+	margin: 0 left;
+}
+
+pass {
+	
 }
 
 label, input {
-    /* in order to define widths */
-    display: inline-block;
+	/*  in order to define widths */
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	color: #444444;
+}
+
+input {
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	color: #444444;
 }
 
 label {
-    width: 30%;
-    /* positions the label text beside the input */
-    text-align: right;
+	width: 10%;
+	/* positions the label text beside the input */
+	text-align: right;
+	font-family: 'Open Sans', sans-serif;
+	color: #444444;
+	padding: 5px;
 }
 
-label + input {
-    width: 30%;
-    /* large margin-right to force the next element to the new-line
+label+input {
+	width: 30%;
+	/* large margin-right to force the next element to the new-line
        and margin-left to create a gutter between the label and input */
-    margin: 0 30% 0 4%;
+	margin: 0 40% 0 10%;
+	font-family: 'Open Sans', sans-serif;
+	color: #444444;
 }
 
 /* only the submit button is matched by this selector,
    but to be sure you could use an id or class for that button */
-input + input {
-    float: right;
+input+input {
+	float: right;
+	margin: 0 30% 0 5%;
+	font-family: 'Open Sans', sans-serif;
+	color: #444444;
+}
+
+.container {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+	position: absolute;
+	opacity: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+	border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+	background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+.tooltip {
+    position: relative;
+    
+	float: left;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
